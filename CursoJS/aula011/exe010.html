@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velocidade do carro <input type="number" name="veloz" id="veloz">
+    <input type="button" value="verificar" id="btnclick">
+    <div id="res"></div>
+    <script>
+        var veloz = window.document.querySelector('input#veloz')
+        var btn = window.document.querySelector('input#btnclick')
+        var res = window.document.querySelector('div#res')
+        btn.addEventListener('click', clicar)
+
+        function clicar(params) {
+            var vz = Number(veloz.value)
+            res.innerHTML = `<p>Sua velocidade é de ${vz}km/h</p> `
+            if (vz >= 51){
+            res.innerHTML += '<p>Você foi multado</p>'
+        }
+        else
+        if (vz < 50){
+        res.innerHTML += '<p>Muito bem! Mantenha sua direção segura.</p>'                            
+        }   
+        }
+    </script>
+</body>
+</html>

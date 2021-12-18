@@ -1,0 +1,37 @@
+@charset 'UTF-8';
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font: normal bold 1.6em sans-serif;    
+}
+section {
+    background-color: whitesmoke;
+    margin: auto;
+    width: 700px;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.254);
+}
+header > h1 {
+    padding-top: 50px;
+    text-align: center;
+    color: rgb(255, 245, 240);
+}
+div#msg {
+    text-align: center;
+    padding: 50px 0px 30px 0px;
+}
+div > img {
+    display: block;
+    margin: auto;
+    padding-bottom: 30px;
+}
+footer > p {
+    font-size: 16px;
+    text-align: center;
+    padding: 30px;
+}
