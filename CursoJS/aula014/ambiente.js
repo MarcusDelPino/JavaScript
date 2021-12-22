@@ -1,0 +1,5 @@
+console.log('Vai Começar a putaria')
+for (var c = 1;c <= 5;c++){
+    console.log(`${c} `)
+}
+console.log('Fim')
