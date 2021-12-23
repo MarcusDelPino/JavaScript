@@ -25,7 +25,7 @@ function clicar(params) {
             
             for (var n4 = n1; n4 <= n2; n4 += n3){
 
-                res.innerHTML += `${n4} `
+                res.innerHTML += `${n4} \u{1F643}`
 
             }
         }
