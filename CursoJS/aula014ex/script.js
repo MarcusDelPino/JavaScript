@@ -10,7 +10,23 @@ function clicar(params) {
     var n1 = Number(inicio.value)
     res.innerHTML = ` ${n1} `
 }*/
+          
+function clicar(params) {
+        var n1 = Number(inicio.value)
+        var n2 = Number(termino.value)
+        var n3 = Number(passo.value)
 
-function name(params) {
-    
+        if (inicio.value.length == 0 || termino.value.length == 0 || passo.value.length == 0) {
+            
+            window.alert('Preencha os números')
+
+        }else{
+            res.innerHTML = ''
+            
+            for (var n4 = n1; n4 <= n2; n4 += n3){
+
+                res.innerHTML += `${n4} `
+
+            }
+        }
 }
