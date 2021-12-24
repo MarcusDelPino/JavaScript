@@ -1,0 +1,19 @@
+*{
+    font-family: sans-serif;
+}
+body {
+    background-color: lightblue;
+}
+main {
+    background-color: whitesmoke;
+    width: 700px;
+    border-radius: 20px;
+    padding: 20px;
+}
+div{
+    margin-left: 20px;
+}
+input{
+    display: grid;
+    margin-bottom: 15px;
+}
