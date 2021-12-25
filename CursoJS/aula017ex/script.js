@@ -36,8 +36,35 @@ function adicionar() {
 }
 
 function concluir(params) {
-    res.innerHTML = `<p>Você selecionou ${valores.length}</p>`
+    if (valores.length == 0) {
+        window.alert('Precisa digitar um valor')
+    }else{
+        let tot = valores.length
+        res.innerHTML = `<p> Você selecionou ${tot} </p>`
+        let min = valores[0]
+        let max = valores[0]
+        let soma = 0
+        let media = 0
+        for(let pos in valores){
+            soma += valores[pos]
+           
+            if (valores[pos] > max) {
+                max = valores[pos]            
+            }
+            if (valores[pos] < min) {
+                min = valores[pos]
+            }
+            let valor = valores[pos] += valores[pos]
+        }
+    media = soma / tot
+    res.innerHTML += `<p>O maior valor foi ${max} </p>`
+    res.innerHTML += `<p>O menor valor foi ${min} </p>`
+    res.innerHTML += `<p>A soma de todos os valores é ${soma} </p> `
+    res.innerHTML += `<p>A medias dos valores é ${media} </p> `
+    }
+}
+
+/*res.innerHTML = `<p>Você selecionou ${valores.length}</p>`
     var min = Math.min.apply(valores)
     res.innerHTML += `O valor mínimo foi ${Number(min.value)} `
-    
-}
+    */
