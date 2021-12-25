@@ -54,7 +54,6 @@ function concluir(params) {
             if (valores[pos] < min) {
                 min = valores[pos]
             }
-            let valor = valores[pos] += valores[pos]
         }
     media = soma / tot
     res.innerHTML += `<p>O maior valor foi ${max} </p>`
