@@ -4,11 +4,15 @@
 body {
     background-color: lightblue;
 }
+h1 {
+    text-align: center;
+}
 main {
     background-color: whitesmoke;
     width: 700px;
     border-radius: 20px;
     padding: 20px;
+    margin: auto;
 }
 div{
     margin-left: 20px;
@@ -16,4 +20,8 @@ div{
 input{
     display: grid;
     margin-bottom: 15px;
+}
+
+#res {
+    text-align: center;
 }
