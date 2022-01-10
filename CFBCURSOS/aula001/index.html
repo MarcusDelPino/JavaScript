@@ -5,20 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variaveis</title>
+    <style>
+        body{
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
     <script>
         
         var carro = 5
         var txt = " mais um dia"
-        var vagas = 6
+        var vagas = 3
 
         var colher = window.prompt('Qual seu nome?','Digite aqui')
         var foi = window.confirm('Olá')
         
 
-        if(foi === true){
+        if(foi == true || carro <= vagas){
             alert('Opa show')
+            document.write(colher + ", parabéns!")
         }else{
             alert('Que isso? ' + colher)
         }
