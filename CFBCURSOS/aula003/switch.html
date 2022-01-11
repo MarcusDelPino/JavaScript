@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <h1>Aprendendo switch</h1>
+    <div>
+    <input type="number" name="txt" id="text" >
+    <input type="button" value="clica aqui" name="btn" id="btn" >
+    </div>
+    <div id="res">
+        
+    </div>
+    <script>    
+        //var pos = window.prompt('Qual sua posição', 'coloque aqui sua posição:')
+        var txt = window.document.querySelector('input#text')
+        var btn = window.document.querySelector('input#btn')
+        var res = window.document.querySelector('div#res')
+
+        btn.addEventListener('click', clicar)
+    
+    function clicar(params) {
+        switch (Number(txt.value)) {
+            case 1:
+                res.innerHTML = `Primeiro lugar `
+                break;
+            case 2:
+                res.innerHTML = 'Segundo Lugar'
+                break;
+            case 3:
+                res.innerHTML =  'Terceiro Lugar'
+                break;
+            default:
+                res.innerHTML = `fora do PODIUM`
+                break;
+        }
+    }
+/*
+
+        if (Number(txt.value) == 1) {
+            res.innerHTML = 'Primeiro Lugar'
+            
+        }else{
+            res.innerHTML = 'Nem importa'
+        }
+    
+        //res.innerHTML += `${txt} `
+        */
+    </script>
+</body>
+</html>
