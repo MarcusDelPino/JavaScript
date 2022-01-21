@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color: var(--cor01);
+            font-family: sans-serif;
+        }
+        :root{
+            --cor01:blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        vetor
+    </h1>
+    <script>
+        var mochila = []
+
+        var item1 = ['corda ', 2]
+        var item2 = ['faca ', 1]
+        var item3 = ['cura ', 5]
+        var item4 = ['prego ', 35]
+        var item5 = [window.prompt('Qual item?'), window.prompt('Qual quantidade?')]
+
+        mochila.push(item1)
+        mochila.push(item2)
+        mochila.push(item3)
+        mochila.push(item4)
+        mochila.push(item5)
+
+        
+        document.write(mochila[4][0])
+        
+    </script>
+</body>
+</html>

@@ -9,22 +9,26 @@
 <body>
     <h1>Minha mochila de Array tem    </h1>
     <script>
-    /*
-    var itens = ['Faca', 'Katana', 'Boomerang', 'Jorge', 'Revolver', 'Corda']
+    ///*
+    var itens = ['Faca', 'Katana', 'Boomerang', 'Jorge', 'Revolver', 'Corda ']
     var mochila = []
-
+    var invent
+    
     mochila.push(window.prompt('Add um item!'))
 
-    //mochila.push(2)
-
-    document.write(itens[mochila[0]])
-    
     mochila.push(itens[4])
 
-    document.write('<br>' + mochila[1])*/
+    document.write(itens.join())
+    document.write(itens[mochila[0]])
+    document.write('<br>' + mochila[1])
+    document.write('<br>' + mochila.sort())
+    //document.write(itens.indexOf('Katana'))
+    //*/
+    invent=itens.concat(mochila)
+
+    document.write('<br>' + invent)
     
-    
-    ///*
+    /*
         var ar = [1, 2, 3, 4, 5, 6]
         function comp(a,b) { 
             return a - b
@@ -37,7 +41,7 @@
         document.write(ar[4] + '<br>')
         document.write(ar.sort(comp))
         
-    //*/
+    */
     </script>
 </body>
 </html>
