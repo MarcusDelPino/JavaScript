@@ -40,7 +40,7 @@ function concluir(params) {
         window.alert('Precisa digitar um valor')
     }else{
         let tot = valores.length
-        res.innerHTML = `<p> Você selecionou ${tot} </p>`
+        res.innerHTML = `<p> Você selecionou ${tot} números</p>`
         let min = valores[0]
         let max = valores[0]
         let soma = 0
