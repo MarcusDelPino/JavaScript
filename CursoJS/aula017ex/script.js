@@ -22,7 +22,7 @@ function inlista(n, l) {
 
 
 function adicionar() {
-    if (isnumero(num.value) && !inlista(num.value, valores)) {
+    if (isnumero(num.value) == true && inlista(num.value, valores) == false) {
         valores.push(Number(num.value))
         var item = document.createElement('option')
         item.text = `O valor escolhido foi ${num.value} `
