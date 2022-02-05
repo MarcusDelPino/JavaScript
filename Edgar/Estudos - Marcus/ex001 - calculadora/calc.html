@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                    <input readonly type="number" name="" id="visor">
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="button" value="C" onclick="limpar()"></td>
+                <td><input type="button" value="<" onclick="apagarUm()"></td>
+                <td><input type="button" value="/" onclick="inserirMetodo('/')"></td>
+                <td><input type="button" value="X" onclick="inserirMetodo('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="inserirNum(7)" onclick="inserirNum()"></td>
+                <td><input type="button" value="8" onclick="inserirNum(8)"></td>
+                <td><input type="button" value="9" onclick="inserirNum(9)"></td>
+                <td><input type="button" value="-" onclick="inserirMetodo('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="inserirNum(4)"></td>
+                <td><input type="button" value="5" onclick="inserirNum(5)"></td>
+                <td><input type="button" value="6" onclick="inserirNum(6)"></td>
+                <td><input type="button" value="+" onclick="inserirMetodo('+')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="inserirNum(1)"></td>
+                <td><input type="button" value="2" onclick="inserirNum(2)"></td>
+                <td><input type="button" value="3" onclick="inserirNum(3)"></td>
+                <td rowspan="2"><input type="button" value="=" class="casas1" onclick="inserirMetodo('=')"></td>
+            </tr>
+            <tr>
+                <td  colspan="2" ><input type="button" value="0" class="casas2" onclick="inserirNum(0)"></td>
+                <td><input type="button" value=","  onclick="inserirMetodo(',')"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

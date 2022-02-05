@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudos Javascript</title>
+</head>
+<body>
+  <div>
+    <input readonly type="text" name="" id="visor">
+  </div>
+  <div>
+    <div>
+      <button onclick="inserirValor(1)">1</button>
+      <button  onclick="inserirValor(2)">2</button>
+      <button  onclick="inserirValor(3)">3</button></div>
+    <div>
+      <button  onclick="inserirValor(4)">4</button>
+      <button  onclick="inserirValor(5)">5</button>
+      <button  onclick="inserirValor(6)">6</button></div>
+    <div>
+      <button  onclick="inserirValor(7)">7</button>
+      <button  onclick="inserirValor(8)">8</button>
+      <button  onclick="inserirValor(9)">9</button></div>
+    <div><button  onclick="inserirValor(0)">0</button></div>
+  </div>
+  <div>
+    <button onclick="executarOperacao('+')">+</button>
+    <button onclick="executarOperacao('-')">-</button>
+    <button onclick="executarOperacao('*')">*</button>
+    <button onclick="executarOperacao('/')">/</button>
+    <button onclick="executarOperacao('=')">=</button>
+  </div>
+  <div>
+    <button onclick="reset()">reset</button>
+  </div>
+
+  <script>
+    let memoria = [];
+    let visualizacaoDoUltimoResultado = false;
+    let valorUltimoResultado = 0;
+    let valorAnterior = 0;
+
+    function elementoVisor() {
+      return document.getElementById("visor");
+    }
+    
+    function valorAtual() {
+      return elementoVisor().value.toString();
+    }
+
+    function inserirValor(valor) {
+      if(valor == null) return;
+      if(visualizacaoDoUltimoResultado == true) {
+        visualizacaoDoUltimoResultado = false;
+        elementoVisor().value = '';
+      }
+
+      const visor = elementoVisor();
+      visor.value = (visor.value.toString() + valor).toString();
+    }
+
+    function executarOperacao(tipoOperacao) {
+      if(tipoOperacao == null || tipoOperacao == '' || tipoOperacao == undefined) {
+        console.error('A operação está nula ou vazia. a operação deve ser +, -, /, * ou =');
+        return;
+      }
+
+      const _valorAtual = valorAtual();
+      console.log("O valor atual do visor é " + _valorAtual);
+      memoria.push(_valorAtual);
+      memoria.push(tipoOperacao);
+      
+      
+      
+      valorAnterior = resultado;
+      limparVisor();
+      console.log(memoria);
+    }
+
+    function exibeUltimoResultado() {
+      visualizacaoDoUltimoResultado = true;
+      elementoVisor().value = valorAnterior;
+    }
+  </script>
+</body>
+</html>

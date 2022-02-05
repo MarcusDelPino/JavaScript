@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="res">
+        <input type="number" id="visorTela" value="">
+    </div>
+    <div>
+        <input type="button" value="Marcus" onclick="inserir(65)">
+        <button onclick="inserir(77)">JORGE</button>
+    </div>
+    <script>
+        const visor = document.querySelector('div#res')
+        const visorTxt = document.querySelector('input#visorTela')
+
+        function inserir(num) {
+            visor.innerHTML += num
+            visorTxt.value = num
+        }
+    </script>
+</body>
+</html>
