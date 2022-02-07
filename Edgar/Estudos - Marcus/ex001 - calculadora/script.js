@@ -2,6 +2,9 @@ const memoriaNum = []
 const visor = document.querySelector('input#visor')
 
 let novoNum = true
+let numeroAntigo
+let numeroAtual
+let operadorCalc
 
 function inserirNum(num) {
    if(novoNum){
@@ -11,20 +14,28 @@ function inserirNum(num) {
        visor.value += num
    }
 }
-
-
-function inserirMetodo(operadores){
-    novoNum = true
-    let numeroAntigo = visor.value
-    calcular()
-    //console.log(NumeroAntigo)
+function inserirMetodo(operadorUsado){
+    if(!novoNum){
+        novoNum = true
+        numeroAntigo = parseFloat(visor.value)
+        calcular()
+        console.log(operadorUsado)
+        console.log(numeroAntigo)
+    }
+}
+function operacaoPendente(){
+    operadorUsado != undefined
 }
 
-function calcular() {
-    let numeroAtual = 0
+function calcular(){
+    if(operacaoPendente()){
+        numeroAtual = parseFloat(visor.value)
+        if (operadorUsado == '+'){
+            visor.value = numeroAntigo + numeroAtual
+            novoNum = true
+        }
+    }
 }
-
-
 
 
 
