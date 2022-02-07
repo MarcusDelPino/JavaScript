@@ -12,6 +12,7 @@ input{
     width: 60px;
     height: 60px;
     background-color: gray;
+    font-size: 2em;
 }
 input:hover{
     background-color: blueviolet;
@@ -27,6 +28,8 @@ input:active {
     height: 122px;
 }
 #visor{
-    width: 242px;
+    padding-right: 10px;
+    width: 234px;
     margin-left: 2px;
+    text-align: right;
 }

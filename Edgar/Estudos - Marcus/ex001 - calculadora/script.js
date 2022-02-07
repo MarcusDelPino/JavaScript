@@ -3,8 +3,10 @@ const visor = document.querySelector('input#visor')
 
 let novoNum = true
 let numeroAntigo
-let numeroAtual
-let operadorCalc
+let operadorSelect
+let contaFeita
+let decimal
+
 
 function inserirNum(num) {
    if(novoNum){
@@ -14,32 +16,73 @@ function inserirNum(num) {
        visor.value += num
    }
 }
-function inserirMetodo(operadorUsado){
-    if(!novoNum){
-        novoNum = true
-        numeroAntigo = parseFloat(visor.value)
-        calcular()
-        console.log(operadorUsado)
-        console.log(numeroAntigo)
-    }
-}
-function operacaoPendente(){
-    operadorUsado != undefined
+
+function operacaoPendente() {
+   return operadorSelect != undefined
+
 }
 
 function calcular(){
-    if(operacaoPendente()){
-        numeroAtual = parseFloat(visor.value)
-        if (operadorUsado == '+'){
-            visor.value = numeroAntigo + numeroAtual
-            novoNum = true
+    if (operacaoPendente()){
+        const numeroAtual = parseFloat(visor.value.replace(',','.'))
+        novoNum = true
+        if(operadorSelect == '+'){
+            visor.value = (numeroAntigo + numeroAtual).toLocaleString('BR')
+        }else if(operadorSelect == '-'){
+            visor.value = (numeroAntigo - numeroAtual).toLocaleString('BR')
+        }else if(operadorSelect == '*'){
+            visor.value = (numeroAntigo * numeroAtual).toLocaleString('BR')
+        }else if(operadorSelect == '/'){
+            visor.value = (numeroAntigo / numeroAtual).toLocaleString('BR')
         }
+        
+    }else {
+        
     }
 }
+function inserirMetodo(operador){
+    if(!novoNum){
+        calcular()
+        novoNum = true
+        numeroAntigo = parseFloat(visor.value.replace(',','.'))
+        operadorSelect = operador
+    }
+}
+function inserirRes(){
+    calcular()
+    operadorSelect = undefined
+}
 
+function limpar(){
+    numeroAntigo = 0
+    numeroAtual = 0
+    visor.value = ''
+    operadorSelect = undefined
+}
+function apagarUm(){
+    let apaga = visor.value
+    visor.value = apaga.slice(0, -1)
+    
+}
 
+function existePonto(){
+   return visor.value.indexOf(',') !== -1
+}
+function existeValor(){
+   return visor.value.length > 0
+}
 
+function inserirDecimal(ponto){
+    if(!existePonto()){
+        if(existeValor()){
+            visor.value += ','
+        }else{
+            visor.value = '0,'
+            novoNum = false
+        }
+    }
 
+}
 
 /* memoriaNum.unshift(visor.value)
     visor.value = ''

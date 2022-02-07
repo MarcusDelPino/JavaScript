@@ -11,7 +11,7 @@
     <table>
         <thead>
             <tr>
-                    <input readonly type="number" name="" id="visor">
+                    <input readonly type="text" name="" id="visor">
             </tr>
         </thead>
         <tbody>
@@ -19,7 +19,7 @@
                 <td><input type="button" value="C" onclick="limpar()"></td>
                 <td><input type="button" value="<" onclick="apagarUm()"></td>
                 <td><input type="button" value="/" onclick="inserirMetodo('/')"></td>
-                <td><input type="button" value="X" onclick="inserirMetodo('*')"></td>
+                <td><input type="button" value="*" onclick="inserirMetodo('*')"></td>
             </tr>
             <tr>
                 <td><input type="button" value="7" onclick="inserirNum(7)"></td>
@@ -41,7 +41,7 @@
             </tr>
             <tr>
                 <td  colspan="2" ><input type="button" value="0" class="casas2" onclick="inserirNum(0)"></td>
-                <td><input type="button" value=","  onclick="inserirMetodo(',')"></td>
+                <td><input type="button" value=","  onclick="inserirDecimal(',')"></td>
             </tr>
         </tbody>
     </table>
