@@ -4,19 +4,25 @@ const visor = document.querySelector('input#visor')
 let novoNum = true
 
 function inserirNum(num) {
-   if(novoNum = true){
+   if(novoNum){
         visor.value = num
         novoNum = false
    } else{
-        visor.value += num
-
+       visor.value += num
    }
 }
 
 
+function inserirMetodo(operadores){
+    novoNum = true
+    let numeroAntigo = visor.value
+    calcular()
+    //console.log(NumeroAntigo)
+}
 
-
-
+function calcular() {
+    let numeroAtual = 0
+}
 
 
 
