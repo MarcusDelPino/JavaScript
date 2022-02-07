@@ -19,27 +19,34 @@
         <input type="button" name="txt" id="txtinput" value="Clicar">
     </div>
     <script>
-        const inp = document.getElementById('res')
-        let res = window.prompt('digite um numero')
-        let res2 = window.prompt('digite outro numero')
+
+        const inp = document.getElementById('visorTela')
         let caixa = []
 
+        let novo = true
+        
+        function inserir(num) {
+            if(novo){
+                inp.value = num
+                novo = false
+            }else{
+                inp.value += num
+            }
+        }
+
+        /*
         caixa.unshift(res)
         caixa.unshift(res2)
 
         let resultado = caixa[1] + caixa[0]
         inp.innerHTML = resultado
-        /*
         const displayNum = document.getElementById('visorTela')
         const inp = document.querySelector('input#txtinput')
         inp.addEventListener('click', clicar)
 
         
         
-        function inserir(num1) {
-        const visor = document.querySelector('div#res')
-        visor.textContent = num1
-        }
+        
         function inserir(num) {
         displayNum.value += num
         }

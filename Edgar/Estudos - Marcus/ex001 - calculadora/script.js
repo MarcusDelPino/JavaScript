@@ -1,13 +1,30 @@
 const memoriaNum = []
 const visor = document.querySelector('input#visor')
 
+let novoNum = true
+
 function inserirNum(num) {
-    
-   return visor.value += num
+   if(novoNum = true){
+        visor.value = num
+        novoNum = false
+   } else{
+        visor.value += num
+
+   }
 }
 
-function inserirMetodo(acao){
-    memoriaNum.unshift(visor.value)
+
+
+
+
+
+
+
+
+
+
+
+/* memoriaNum.unshift(visor.value)
     visor.value = ''
     
     if(acao == '+'){
@@ -43,3 +60,4 @@ function inserirMetodo(acao){
     //memoriaNum.unshift(visor.value)
     console.log(memoriaNum)
 }
+*/
