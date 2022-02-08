@@ -47,6 +47,7 @@ function inserirMetodo(operador){
         numeroAntigo = parseFloat(visor.value.replace(',','.'))
         operadorSelect = operador
     }
+    
 }
 function inserirRes(){
     calcular()
