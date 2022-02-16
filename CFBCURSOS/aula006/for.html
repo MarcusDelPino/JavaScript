@@ -14,15 +14,30 @@
         }
 */
     
+        var mochila = [
+            ['corda', 1],
+            ['refil', 3],
+            ['prego', 15],
+            ['Martelo', 1],
+        ]
+
+        for (var i = 0; i < 4; i++){
+            for(var l = 0; l < 2; l++){
+                document.write(mochila[i][l] + ' ')
+            }
+            document.write('<br>')
+        }
+
+/*
         var mochila = []
-        window.prompt('Qual seu nome?')
-
-        mochila.pop()
-
         for(mochila[0]; mochila[0] != 'faca'; mochila.unshift(window.prompt('Add um item!'))){
             
         }
+        console.log(mochila)
+        mochila.sort()
         document.write(mochila)
+        */
+    
     </script>
 </body>
 </html>
