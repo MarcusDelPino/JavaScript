@@ -16,11 +16,19 @@
     </style>
 </head>
 <body>
-    <h1>
-        vetor
-    </h1>
+    <div id="canvasId">
+
+    </div>
     <script>
-        var mochila = []
+        
+        var marbe = pickRandom(['cup1', 'cup2', 'cup3',]);
+            if (marbe!=='cup2') {console.log(pickRandom(['oops,try again', 'not your lucky day', 'maybe next time',]));} 
+            else {console.log(pickRandom(['GOTCHA!', 'YOU HIT THE JACKPOT!', 'LOOK WHAT U FOUND!',]));}
+
+        print(marbe)
+
+        
+  /*      var mochila = []
 
         var item1 = ['corda ', 2]
         var item2 = ['faca ', 1]
@@ -36,7 +44,7 @@
 
         
         document.write(mochila[4][1])
-        
+        */
     </script>
 </body>
 </html>
